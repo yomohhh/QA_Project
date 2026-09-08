@@ -22,10 +22,10 @@ def test_login_flow(page, username, password, expected_result, is_positive):
     login_page.login_to_shop(username, password)
 
     if is_positive:
-        # Если тест позитивный — проверяем, что нас пустило в каталог
+
         assert expected_result in page.url
     else:
-        # Если тест негативный — проверяем, что видна ошибка и текст совпадает
+
         assert login_page.error_message.is_visible()
         assert expected_result in login_page.error_message.text_content()
 
