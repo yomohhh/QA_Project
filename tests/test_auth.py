@@ -2,6 +2,7 @@ import pytest
 from pages.login_page import LoginPage
 from pages.inventory_page import InventoryPage
 from pages.cart_page import CartPage
+from playwright.sync_api import expect
 
 @pytest.mark.parametrize("username, password, expected_result, is_positive", [
     ("standard_user", "secret_sauce", "inventory.html", True),
@@ -38,7 +39,7 @@ def test_cart_workflow(page):
     inventory_page.add_backpack_to_cart()
     inventory_page.go_to_cart()
 
-    assert cart_page.checkout_button.is_visible()
+    expect(cart_page.checkout_button).to_be_visible()
 
 
 def test_remove_item_from_cart(page):
@@ -54,4 +55,4 @@ def test_remove_item_from_cart(page):
 
     cart_page.remove_button.click()
 
-    assert inventory_page.cart_badge.is_hidden()
+    expect(inventory_page.cart_badge).to_be_hidden()
