@@ -1,0 +1,7 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","308","test_login_flow[chromium-standard_user--Password is required-False]","tests","2026-10-13","passed","2026-10-13","","test_auth","",""
+"","485","test_remove_item_from_cart[chromium]","tests","2026-10-13","passed","2026-10-13","","test_auth","",""
+"","343","test_login_flow[chromium--secret_sauce-Username is required-False]","tests","2026-10-13","passed","2026-10-13","","test_auth","",""
+"","423","test_login_flow[chromium-standard_user-secret_sauce-inventory.html-True]","tests","2026-10-13","passed","2026-10-13","","test_auth","",""
+"","360","test_login_flow[chromium-standard_user-wrong_password-do not match-False]","tests","2026-10-13","passed","2026-10-13","","test_auth","",""
+"","447","test_cart_workflow[chromium]","tests","2026-10-13","passed","2026-10-13","","test_auth","",""
