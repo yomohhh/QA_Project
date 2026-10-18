@@ -35,14 +35,9 @@ def test_login_flow(page, username, password, expected_result, is_positive):
 
 @allure.feature("Cart")
 @allure.title("Add a product to the cart and open the cart")
-def test_cart_workflow(page):
-    login_page = LoginPage(page)
-    inventory_page = InventoryPage(page)
-    cart_page = CartPage(page)
-
-    with allure.step("Open the SauceDemo login page and log in"):
-        login_page.open_url("https://saucedemo.com")
-        login_page.login_to_shop("standard_user", "secret_sauce")
+def test_cart_workflow(logged_in_page):
+    inventory_page = InventoryPage(logged_in_page)
+    cart_page = CartPage(logged_in_page)
 
     with allure.step("Add the Sauce Labs Backpack to the cart"):
         inventory_page.add_backpack_to_cart()
@@ -56,14 +51,9 @@ def test_cart_workflow(page):
 
 @allure.feature("Cart")
 @allure.title("Remove a product from the cart")
-def test_remove_item_from_cart(page):
-    login_page = LoginPage(page)
-    inventory_page = InventoryPage(page)
-    cart_page = CartPage(page)
-
-    with allure.step("Open the SauceDemo login page and log in"):
-        login_page.open_url("https://saucedemo.com")
-        login_page.login_to_shop("standard_user", "secret_sauce")
+def test_remove_item_from_cart(logged_in_page):
+    inventory_page = InventoryPage(logged_in_page)
+    cart_page = CartPage(logged_in_page)
 
     with allure.step("Add the Sauce Labs Backpack to the cart"):
         inventory_page.add_backpack_to_cart()
