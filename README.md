@@ -1,52 +1,52 @@
-\# SauceDemo UI Tests
+SauceDemo UI Tests
 
 
 
-!\[Tests](https://github.com/yomohhh/QA\_Project/actions/workflows/run\_tests.yml/badge.svg)
+[Tests](https://github.com/yomohhh/QA\_Project/actions/workflows/run\_tests.yml/badge.svg)
 
 
 
-UI test suite for \[saucedemo.com](https://www.saucedemo.com/) built with
+UI test suite for [saucedemo.com](https://www.saucedemo.com/) built with
 
 Python, pytest, Playwright and Allure.
 
 
 
-\*\*Live report:\*\* https://yomohhh.github.io/QA\_Project/
+Live report: https://yomohhh.github.io/QA\_Project/
 
 
 
-\## What is tested
+What is tested
 
 
 
-\- \*\*Authentication:\*\* login with valid credentials, wrong password, empty username and empty password
+Authentication: login with valid credentials, wrong password, empty username and empty password
 
-\- \*\*Cart:\*\* add a product to the cart and open the cart
+Cart: add a product to the cart and open the cart
 
-\- \*\*Cart:\*\* remove a product from the cart
-
-
-
-\## Tech stack
+Cart: remove a product from the cart
 
 
 
-\- Python 3.12
-
-\- pytest and pytest-playwright
-
-\- Playwright (Chromium)
-
-\- Allure for test reports
-
-\- GitHub Actions for continuous integration
-
-\- GitHub Pages for publishing the report
+Tech stack
 
 
 
-\## Run locally
+Python 3.12
+
+pytest and pytest-playwright
+
+Playwright (Chromium)
+
+Allure for test reports
+
+GitHub Actions for continuous integration
+
+GitHub Pages for publishing the report
+
+
+
+Run locally
 
 
 
@@ -82,7 +82,7 @@ allure serve allure-results
 
 
 
-\## CI and reports
+CI and reports
 
 
 
@@ -90,11 +90,11 @@ Every push to `master` runs the tests on GitHub Actions. The workflow then:
 
 
 
-1\. Runs all tests and writes results to `allure-results/`.
+1. Runs all tests and writes results to `allure-results/`.
 
-2\. Generates an HTML report with the Allure CLI.
+2. Generates an HTML report with the Allure CLI.
 
-3\. Publishes the report to the `gh-pages` branch, which GitHub Pages serves at the link above.
+3. Publishes the report to the `gh-pages` branch, which GitHub Pages serves at the link above.
 
 
 
@@ -124,11 +124,4 @@ requirements.txt    pinned dependencies
 
 ```
 
-
-
-\## License
-
-
-
-MIT
 
