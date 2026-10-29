@@ -13,7 +13,7 @@ def browser_context_args(browser_context_args):
 
 @pytest.fixture
 def logged_in_page(page):
-    """Open SauceDemo and log in as standard_user. Returns the same page."""
+
     login_page = LoginPage(page)
     login_page.open_url("https://saucedemo.com")
     login_page.login_to_shop("standard_user", "secret_sauce")
@@ -22,7 +22,6 @@ def logged_in_page(page):
 
 @pytest.hookimpl(hookwrapper=True)
 def pytest_runtest_makereport(item, call):
-    """Attach a screenshot to the Allure report when a test fails."""
     outcome = yield
     report = outcome.get_result()
 
